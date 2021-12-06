@@ -104,6 +104,14 @@ DATASET_PRESETS = {
               'test': 'validation',
               'crop': 384})
          }),
+  
+  'mnist': ml_collections.ConfigDict(
+        {'total_steps': 20_000,
+         'pp': ml_collections.ConfigDict(
+             {'train': 'train[:99%]',
+              'test': 'validation',
+              'crop': 384})
+         }),
 }
 
 
